@@ -1,7 +1,11 @@
 // IMPORT useState
 import React from 'react';
 import './styles.css';
+import imageData from "./imageData";
+
 // IMPORT imageData.js AND STORE IT IN A VARIABLE CALLED imagesArr
+
+const imagesArr = 
 
 export default function App() {
   // USE useState TO CREATE  [bigImage, setBigImage] 
