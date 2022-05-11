@@ -18,16 +18,23 @@ import imagesArr from "./imageData";
 
   // CREATE A VARIABLE CALLED images THAT LOOPs OVER THE imagesArr AND RETURNS AN <IMG> ELEMENT
   // ASSIGN ALL OF THE PROPERTIES THAT IT NEEDS: src, alt, className, key INCLUDING AN onClick EVENT THAT CALLS THE HANDLE EVENT FUNCTION AND PASSES IT THE IMG URL
+  
+  const images = imagesArr.map((ele, index) => {
+    return (
+    <img className="thumb" src={ele.img} alt={ele.alt} key={index} onClick={()=>handleClick(ele.setState)} />
+    )
+  });
 
   return (
     <div className="App">
       <h1>Cities Of The World</h1>
       <div id="wrapper">
         <div id="thumbnails">
-          {/* RENDER THE IMAGES ARRAY  */}
+          {/* RENDER THE IMAGES ARRAY */}
+          {images}
         </div>
         {/* THE SRC IMAGE URL SHOULD BE SET TO THE VALUE THAT IS STORED IN bigImage */}
-        {/* <img src="" id="bigimage" alt='bigImage'/> */}
+        <img src={bigImage} id="bigimage" alt='bigImage'/>
       </div>
     </div>
   );
