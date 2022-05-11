@@ -13,7 +13,7 @@ import imagesArr from "./imageData";
   // THE FUNCTION SHOULD CALL setBigImage AND PASS IT THE URL
 
   const handleClick = (imageURL) => {
-    setBigImage({imageURL: "img"});
+    setBigImage(imageURL)
   };
 
   // CREATE A VARIABLE CALLED images THAT LOOPs OVER THE imagesArr AND RETURNS AN <IMG> ELEMENT
@@ -21,7 +21,7 @@ import imagesArr from "./imageData";
   
   const images = imagesArr.map((ele, index) => {
     return (
-    <img className="thumb" src={ele.img} alt={ele.alt} key={index} onClick={()=>handleClick(ele.setState)} />
+    <img className="thumb" src={ele.img} alt={ele.alt} key={index} onClick={()=>handleClick(ele.img)} />
     )
   });
 
